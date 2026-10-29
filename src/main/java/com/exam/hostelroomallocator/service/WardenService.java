@@ -41,5 +41,10 @@ public class WardenService {
         return false;
     }
 
+    //C1
+    public List<Warden> findByDutyAreaName(String name) {
+        return repository.searchByDutyAreaName(name);
+    }
+
 }
 
