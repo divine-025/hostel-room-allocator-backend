@@ -47,4 +47,9 @@ public class DutyAreaService {
         return false;
     }
 
+    //C3
+    public List<DutyArea> findUnused() {
+        return repository.findUnused();
+    }
+
 }

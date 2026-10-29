@@ -52,6 +52,11 @@ public class WardenController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("The warden with that id does not exist");
         }
     }
+    //C1
+    @GetMapping("/by-duty-area")
+    public ResponseEntity<List<Warden>> findByDutyArea(@RequestParam String name) {
+        return ResponseEntity.ok(service.findByDutyAreaName(name));
+    }
 }
 
 

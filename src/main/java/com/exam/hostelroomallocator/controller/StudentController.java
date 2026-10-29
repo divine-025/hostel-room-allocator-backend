@@ -62,6 +62,17 @@ public class StudentController {
      public ResponseEntity<List<Student>> findByLastName(@RequestParam String lastName) {
         return ResponseEntity.ok(service.findByLastName(lastName));
      }
+
+     //C4
+     @GetMapping("/of-warden/{wardenId}")
+     public ResponseEntity<?> findStudentOfWarden(@PathVariable UUID wardenId) {
+        Optional<List<Student>> students = service.findStudentsOfWarden(wardenId);
+        if (students.isPresent()) {
+            return ResponseEntity.ok(students.get());
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("The warden with that id does not exist");
+        }
+     }
 }
 
 

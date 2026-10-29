@@ -52,5 +52,10 @@ public class DutyAreaController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("the duty area with that id does not exist");
         }
     }
+    //C3
+    @GetMapping("/unused")
+    public ResponseEntity<List<DutyArea>> findUnused() {
+        return ResponseEntity.ok(service.findUnused());
+    }
   
 }

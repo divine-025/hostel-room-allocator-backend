@@ -54,4 +54,9 @@ public class HostelBlockController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("The hostel block with that id does not exist");
         }
     }
+    //C2
+    @GetMapping("/free")
+    public ResponseEntity<List<HostelBlock>> findFree() {
+        return ResponseEntity.ok(service.findFreeBlocks());
+    }
 }

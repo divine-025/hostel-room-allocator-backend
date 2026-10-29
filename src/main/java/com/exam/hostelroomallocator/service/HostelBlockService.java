@@ -43,4 +43,9 @@ public class HostelBlockService {
         return false;
     
     }
+
+    //C2
+    public List<HostelBlock> findFreeBlocks() {
+        return repository.findFreeBlocks();
+    }
 }

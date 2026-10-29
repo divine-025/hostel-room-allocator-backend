@@ -2,6 +2,7 @@ package com.exam.hostelroomallocator.service;
 
 import com.exam.hostelroomallocator.domain.Student;
 import com.exam.hostelroomallocator.repository.StudentRepository;
+import com.exam.hostelroomallocator.repository.WardenRepository;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
@@ -12,10 +13,12 @@ import java.util.UUID;
 public class StudentService {
 
     private final StudentRepository repository;
+    private final WardenRepository wardenRepository;
 
     //Constructor Injection
-    public StudentService(StudentRepository repository) {
+    public StudentService(StudentRepository repository, WardenRepository wardenRepository) {
         this.repository = repository;
+        this.wardenRepository = wardenRepository;
 
     }
     public Student save(Student student) { 
@@ -50,5 +53,12 @@ public List<Student> findByLastName(String lastName) {
     return repository.findByLastNameIgnoreCaseOrderByFirstNameAsc(lastName);
 }
 
+//C4 for empty optional; which means the warden does not exist
+public Optional<List<Student>> findStudentsOfWarden(UUID wardenId) {
+    if (!wardenRepository.existsById(wardenId)) {
+        return Optional.empty();
+    }
+    return Optional.of(repository.findStudentsOfWarden(wardenId));
+}
 }
 
