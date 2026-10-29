@@ -13,6 +13,6 @@ public interface StudentRepository extends JpaRepository<Student, UUID> {
     List<Student> findByLastNameIgnoreCaseOrderByFirstNameAsc(String lastName);
     
     //C4
-    @Query("SELECT DISTINCT r.student FROM RoomAllocation r WHERE r.wardemn.id = :wardenId")
+    @Query("SELECT DISTINCT r.student FROM RoomAllocation r WHERE r.warden.id = :wardenId")
     List<Student> findStudentsOfWarden(@Param("wardenId") UUID wardenId);
 }
