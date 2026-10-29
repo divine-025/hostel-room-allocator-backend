@@ -26,13 +26,13 @@ public class WardenController {
     public ResponseEntity<List<Warden>> findAll() {
         return ResponseEntity.ok(service.findAll());
     }
-    @GetMapping("/id")
+    @GetMapping("/{id}")
     public ResponseEntity<?> findById(@PathVariable UUID id) {
         Optional<Warden> warden = service.findById(id);
         if (warden.isPresent()) {
             return ResponseEntity.ok(warden.get());
         } else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("The warden with this id does not exist");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("The warden with that id does not exist");
         }
     }
     @PutMapping("/update/{id}")
@@ -49,7 +49,7 @@ public class WardenController {
         if (service.delete(id)) {
             return ResponseEntity.ok("warden deleted successfully");
         } else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("The warden with this id does not exist");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("The warden with that id does not exist");
         }
     }
 }

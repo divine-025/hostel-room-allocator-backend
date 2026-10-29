@@ -35,14 +35,23 @@ public class HostelBlockController {
         } else {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("the hostel block with that id does not exist");
         }
-
     }
+    @PutMapping("/update/{id}")
+    public ResponseEntity<?> update(@PathVariable UUID id, @RequestBody HostelBlock hostelBlock) {
+        Optional<HostelBlock> updated = service.update(id, hostelBlock);
+        if (updated.isPresent()) {
+            return ResponseEntity.ok(updated.get());
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("The hostel block with that id does not exist");
+        }
+    }
+
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> delete(@PathVariable UUID id) {
         if (service.delete(id)) {
             return ResponseEntity.ok("Hostel block deleted successfully");
         } else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("The hostel block with this id does not exist");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("The hostel block with that id does not exist");
         }
     }
 }

@@ -32,7 +32,7 @@ public class DutyAreaController {
         if (dutyArea.isPresent()) {
             return ResponseEntity.ok(dutyArea.get());
         } else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("The duty area with this id does not exist");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("The duty area with that id does not exist");
         }
     }
     @PutMapping("/update/{id}")
@@ -41,7 +41,7 @@ public class DutyAreaController {
         if (updated.isPresent()) {
             return ResponseEntity.ok(updated.get());        
         } else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("The dusty area with this id does not exist");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("The dusty area with that id does not exist");
         }
     }
     @DeleteMapping("/delete/{id}")
@@ -49,7 +49,7 @@ public class DutyAreaController {
         if (service.delete(id)) {
             return ResponseEntity.ok("Duty are deleted successfully");
         } else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("the duty area with this id does not exist");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("the duty area with that id does not exist");
         }
     }
   

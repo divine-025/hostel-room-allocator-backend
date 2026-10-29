@@ -1,0 +1,893 @@
+{
+  "info": {
+    "_postman_id": "47d87aad-ca4e-4b48-9932-1ba796a8a7a9",
+    "name": "hostel-room-allocator-midterm",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "58466397",
+    "_collection_link": "https://go.postman.co/collection/58466397-47d87aad-ca4e-4b48-9932-1ba796a8a7a9?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "A2 - Save Duty Area",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Maintenance\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/duty-areas/save",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "duty-areas",
+            "save"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "A2 - Save Security",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Security\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/duty-areas/save",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "duty-areas",
+            "save"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "A2-Save Discipline",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Discipline\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/duty-areas/save",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "duty-areas",
+            "save"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "A2-Save Welfare",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Welfare\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/duty-areas/save",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "duty-areas",
+            "save"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "A2-Save Block 1",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"blockNumber\": 1,\r\n    \"name\": \"Block 1\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/hostel-blocks/save",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "hostel-blocks",
+            "save"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "A2-Save Block 2",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"blockNumber\": 2,\r\n    \"name\": \"Block 2\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/hostel-blocks/save",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "hostel-blocks",
+            "save"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "A2-Save Block 3",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"blockNumber\": 3,\r\n    \"name\": \"Block 3\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/hostel-blocks/save",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "hostel-blocks",
+            "save"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "A2-Save Block 4",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"blockNumber\": 4,\r\n    \"name\": \"Block 4\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/hostel-blocks/save",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "hostel-blocks",
+            "save"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "A2-Save Student 1",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"firstName\": \"Marie\",\r\n    \"lastName\": \"Ingaire\",\r\n    \"regNumber\": \"24-5120\",\r\n    \"phone\": \"0780000001\",\r\n    \"programme\": \"IT\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/students/save",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "students",
+            "save"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "A2-Save Student 2",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"firstName\": \"Claire\",\r\n    \"lastName\": \"Ingaire\",\r\n    \"regNumber\": \"24-5121\",\r\n    \"phone\": \"0780000002\",\r\n    \"programme\": \"Business\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/students/save",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "students",
+            "save"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "A2-Save Student 3",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"firstName\": \"Peter\",\r\n    \"lastName\": \"Kwizera\",\r\n    \"regNumber\": \"24-5122\",\r\n    \"phone\": \"0780000003\",\r\n    \"programme\": \"Theology\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/students/save",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "students",
+            "save"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "A2-Save Student 4",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"firstName\": \"Paul\",\r\n    \"lastName\": \"Mugabo\",\r\n    \"regNumber\": \"24-5123\",\r\n    \"phone\": \"0780000004\",\r\n    \"programme\": \"Education\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/students/save",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "students",
+            "save"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "A2-Save Student 5",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"firstName\": \"Sarah\",\r\n    \"lastName\": \"Uwase\",\r\n    \"regNumber\": \"24-5124\",\r\n    \"phone\": \"0780000005\",\r\n    \"programme\": \"Nursing\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/students/save",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "students",
+            "save"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "A2-get all hostel-blocks",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8081/api/hostel-blocks/all",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "hostel-blocks",
+            "all"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "A2-get all duty-areas",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8081/api/duty-areas/all",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "duty-areas",
+            "all"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "A2-Save Warden 1",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"firstNmae\": \"John\",\r\n    \"lastNmae\": \"Doe\",\r\n    \"phone\": \"0790000001\",\r\n    \"hostelBlock\": {\r\n        \"id\": \"72ae8c28-349d-446a-ab50-3ea15277d0a5\"\r\n    },\r\n    \"dutyAreas\": [\r\n        {\r\n            \"id\": \"eba9c05d-e0da-483e-90c8-d87716f2b294\"\r\n        },\r\n        {\r\n            \"id\": \"39b50d98-f8a5-4c7a-95dd-58c19a973ff2\"\r\n        }\r\n    ]\r\n\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/wardens/save",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "wardens",
+            "save"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "A2-Save Warden 2",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"firstNmae\": \"Jane\",\r\n    \"lastNmae\": \"Smith\",\r\n    \"phone\": \"0790000002\",\r\n    \"hostelBlock\": {\r\n        \"id\": \"4dc805ae-fba1-43b0-859c-69a57fd21025\"\r\n    },\r\n    \"dutyAreas\": [\r\n        {\r\n            \"id\": \"cac21c81-e574-44c9-9e47-957ff1441113\"\r\n        }\r\n    ]\r\n\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/wardens/save",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "wardens",
+            "save"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "A2-Save Warden 3",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"firstNmae\": \"Alice\",\r\n    \"lastNmae\": \"Jones\",\r\n    \"phone\": \"0790000003\",\r\n    \"hostelBlock\": {\r\n        \"id\": \"1c4d3c46-bbbb-4b3f-a6b8-41d39cac9c8d\"\r\n    },\r\n    \"dutyAreas\": []\r\n\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/wardens/save",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "wardens",
+            "save"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "A2-get all Students",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"firstNmae\": \"Alice\",\r\n    \"lastNmae\": \"Jones\",\r\n    \"phone\": \"0790000003\",\r\n    \"hostelBlock\": {\r\n        \"id\": \"1c4d3c46-bbbb-4b3f-a6b8-41d39cac9c8d\"\r\n    },\r\n    \"dutyAreas\": []\r\n\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/students/all",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "students",
+            "all"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "A2-get all Wardens",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"firstNmae\": \"Alice\",\r\n    \"lastNmae\": \"Jones\",\r\n    \"phone\": \"0790000003\",\r\n    \"hostelBlock\": {\r\n        \"id\": \"1c4d3c46-bbbb-4b3f-a6b8-41d39cac9c8d\"\r\n    },\r\n    \"dutyAreas\": []\r\n\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/wardens/all",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "wardens",
+            "all"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "A2-Save Allocation 1",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"allocationDate\": \"2026-10-20\",\r\n    \"status\": \"DECLINED\",\r\n    \"roomCode\": \"A101\",\r\n    \"bedNumber\": 1,\r\n    \"student\": {\"id\": \"25b8372b-bcad-4481-a228-b70e2da3ba52\"},\r\n    \"warden\": { \"id\": \"7646b2da-a1f8-48ee-9783-820ee039ac15\"}\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/room-allocations/save",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "room-allocations",
+            "save"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "A2-Save Allocation 2",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"allocationDate\": \"2026-10-20\",\r\n    \"status\": \"REQUESTED\",\r\n    \"roomCode\": \"A102\",\r\n    \"bedNumber\": 2,\r\n    \"student\": {\"id\": \"8156d5d3-488a-488a-b58b-ae769de62977\"},\r\n    \"warden\": { \"id\": \"fa5c2f95-4d24-4236-895c-46025c784f11\"}\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/room-allocations/save",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "room-allocations",
+            "save"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "A2-Save Allocation 3(student 1's 2nd allocation)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"allocationDate\": \"2026-10-25\",\r\n    \"status\": \"APPROVED\",\r\n    \"roomCode\": \"B201\",\r\n    \"bedNumber\": 1,\r\n    \"student\": {\"id\": \"25b8372b-bcad-4481-a228-b70e2da3ba52\"},\r\n    \"warden\": { \"id\": \"fa5c2f95-4d24-4236-895c-46025c784f11\"}\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/room-allocations/save",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "room-allocations",
+            "save"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "A2-Save Allocation 4(student1's 3rd allocation)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"allocationDate\": \"2026-10-30\",\r\n    \"status\": \"CHECKED_IN\",\r\n    \"roomCode\": \"C301\",\r\n    \"bedNumber\": 1,\r\n    \"student\": {\"id\": \"25b8372b-bcad-4481-a228-b70e2da3ba52\"},\r\n    \"warden\": { \"id\": \"fccd73e8-b108-4b55-bd27-a07e800916ed\"}\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/room-allocations/save",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "room-allocations",
+            "save"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "A2-Save Allocation 5",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"allocationDate\": \"2026-11-01\",\r\n    \"status\": \"CHECKED_IN\",\r\n    \"roomCode\": \"B205\",\r\n    \"bedNumber\": 2,\r\n    \"student\": {\"id\": \"6eb9774a-0e7b-403f-a4a0-4549acb61570\"},\r\n    \"warden\": { \"id\": \"ec4ce353-82ab-460d-8698-779db24e4d0e\"}\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/room-allocations/save",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "room-allocations",
+            "save"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "A2-Save Allocation 6",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"allocationDate\": \"2026-11-05\",\r\n    \"status\": \"REQUESTED\",\r\n    \"roomCode\": \"C305\",\r\n    \"bedNumber\": 1,\r\n    \"student\": {\"id\": \"f1cfd0fc-dd48-4a6c-a84d-0baf7218ff33\"},\r\n    \"warden\": { \"id\": \"1561681a-f028-4337-9c89-46dbca61bb2b\"}\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/room-allocations/save",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "room-allocations",
+            "save"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "A2-Save Allocation 7",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"allocationDate\": \"2026-11-10\",\r\n    \"status\": \"APPROVED\",\r\n    \"roomCode\": \"A105\",\r\n    \"bedNumber\": 1,\r\n    \"student\": {\"id\": \"5010a34e-5471-4eb9-8e46-159aed741c51\"},\r\n    \"warden\": { \"id\": \"7646b2da-a1f8-48ee-9783-820ee039ac15\"}\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/room-allocations/save",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "room-allocations",
+            "save"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "A2-Save Allocation 8",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"allocationDate\": \"2026-11-15\",\r\n    \"status\": \"DECLINED\",\r\n    \"roomCode\": \"B210\",\r\n    \"bedNumber\": 1,\r\n    \"student\": {\"id\": \"8156d5d3-488a-488a-b58b-ae769de62977\"},\r\n    \"warden\": { \"id\": \"ec4ce353-82ab-460d-8698-779db24e4d0e\"}\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/room-allocations/save",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "room-allocations",
+            "save"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "A2-Save Allocation 9",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"allocationDate\": \"2026-10-15\",\r\n    \"status\": \"REQUESTED\",\r\n    \"roomCode\": \"C310\",\r\n    \"bedNumber\": 2,\r\n    \"student\": {\"id\": \"6eb9774a-0e7b-403f-a4a0-4549acb61570\"},\r\n    \"warden\": { \"id\": \"1561681a-f028-4337-9c89-46dbca61bb2b\"}\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/room-allocations/save",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "room-allocations",
+            "save"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "A2-Save Allocation 9 Copy",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"allocationDate\": \"2026-10-05\",\r\n    \"status\": \"CHECKED_IN\",\r\n    \"roomCode\": \"A110\",\r\n    \"bedNumber\": 1,\r\n    \"student\": {\"id\": \"f1cfd0fc-dd48-4a6c-a84d-0baf7218ff33\"},\r\n    \"warden\": { \"id\": \"7646b2da-a1f8-48ee-9783-820ee039ac15\"}\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/room-allocations/save",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "room-allocations",
+            "save"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

@@ -36,7 +36,7 @@ public class StudentController {
         if (student.isPresent()) {
             return ResponseEntity.ok(student.get());
         } else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("The student with this id does not exist");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("The student with that id does not exist");
         }
      }
      @PutMapping("/update/{id}")
@@ -45,7 +45,7 @@ public class StudentController {
         if (updated.isPresent()) {
             return ResponseEntity.ok(updated.get());
         } else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("The student with this id does not exist");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("The student with that id does not exist");
         }
      }
 
@@ -54,8 +54,13 @@ public class StudentController {
         if (service.delete(id)) {
             return ResponseEntity.ok("Student delete successfully");
         } else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("The studente with this id does not exist");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("The studente with that id does not exist");
         }
+     }
+     // B1
+     @GetMapping("/by-last-name")
+     public ResponseEntity<List<Student>> findByLastName(@RequestParam String lastName) {
+        return ResponseEntity.ok(service.findByLastName(lastName));
      }
 }
 

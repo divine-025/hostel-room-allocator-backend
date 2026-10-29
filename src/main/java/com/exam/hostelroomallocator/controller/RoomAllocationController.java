@@ -5,6 +5,8 @@ import com.exam.hostelroomallocator.service.RoomAllocationService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import com.exam.hostelroomallocator.domain.AllocationStatus;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -33,7 +35,7 @@ public class RoomAllocationController {
         if (roomAllocation.isPresent()) {
             return ResponseEntity.ok(roomAllocation.get());
         } else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("The room allocation with this id does not exist");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("The room allocation with that id does not exist");
         }
     }
     @PutMapping("/update/{id}")
@@ -50,8 +52,23 @@ public class RoomAllocationController {
         if (service.delete(id)) {
             return ResponseEntity.ok("Room allocation deleted successfully");
         } else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("The room allocation with this id does not exist");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("The room allocation with that id does not exist");
         }
     }
+
+    //B2
+    @GetMapping("/by-status")
+    public ResponseEntity<List<RoomAllocation>> findByStatus(@RequestParam AllocationStatus status) {
+        return ResponseEntity.ok(service.findByStatus(status));
+    }
+
+    //B3
+    @GetMapping("/between")
+    public ResponseEntity<List<RoomAllocation>> findBetween(@RequestParam String start, @RequestParam String end) {
+        LocalDate startDate = LocalDate.parse(start);
+        LocalDate endDate = LocalDate.parse(end);
+        return ResponseEntity.ok(service.findBetween(startDate, endDate));
+    }
 }
+
 
