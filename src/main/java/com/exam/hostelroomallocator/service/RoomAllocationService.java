@@ -1,6 +1,8 @@
 package com.exam.hostelroomallocator.service;
 
 import com.exam.hostelroomallocator.domain.RoomAllocation;
+import com.exam.hostelroomallocator.domain.AllocationStatus;
+import java.time.LocalDate;
 import com.exam.hostelroomallocator.repository.RoomAllocationRepository;
 import org.springframework.stereotype.Service;
 import java.util.List;
@@ -41,5 +43,15 @@ public class RoomAllocationService {
             return true;
         }
         return false;
+    }
+
+    //B2
+    public List<RoomAllocation> findByStatus(AllocationStatus status) {
+        return repository.findByStatusOrderByAllocationDateAsc(status);
+    }
+
+    //B3
+    public List<RoomAllocation> findBetween(LocalDate start, LocalDate end) {
+        return repository.findByAllocationDateBetweenOrderByAllocationDateAsc(start, end);
     }
 }
