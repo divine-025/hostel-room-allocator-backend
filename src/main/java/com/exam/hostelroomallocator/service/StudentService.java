@@ -44,6 +44,11 @@ public class StudentService {
         return false;
     }
 
+
+//B1
+public List<Student> findByLastName(String lastName) {
+    return repository.findByLastNameIgnoreCaseOrderByFirstNameAsc(lastName);
 }
 
+}
 
