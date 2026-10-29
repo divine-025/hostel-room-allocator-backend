@@ -254,7 +254,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n    \"firstName\": \"Marie\",\r\n    \"lastName\": \"Ingaire\",\r\n    \"regNumber\": \"24-5120\",\r\n    \"phone\": \"0780000001\",\r\n    \"programme\": \"IT\"\r\n}",
+          "raw": "{\r\n    \"firstName\": \"Marie\",\r\n    \"lastName\": \"Ingabire\",\r\n    \"regNumber\": \"24-5120\",\r\n    \"phone\": \"0780000001\",\r\n    \"programme\": \"IT\"\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -278,13 +278,44 @@
       "response": []
     },
     {
+      "name": "A2-Save Student 1 correction",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"firstName\": \"Marie\",\r\n    \"lastName\": \"Ingabire\",\r\n    \"regNumber\": \"24-5120\",\r\n    \"phone\": \"0780000001\",\r\n    \"programme\": \"IT\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/students/update/25b8372b-bcad-4481-a228-b70e2da3ba52",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "students",
+            "update",
+            "25b8372b-bcad-4481-a228-b70e2da3ba52"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
       "name": "A2-Save Student 2",
       "request": {
         "method": "POST",
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n    \"firstName\": \"Claire\",\r\n    \"lastName\": \"Ingaire\",\r\n    \"regNumber\": \"24-5121\",\r\n    \"phone\": \"0780000002\",\r\n    \"programme\": \"Business\"\r\n}",
+          "raw": "{\r\n    \"firstName\": \"Claire\",\r\n    \"lastName\": \"Ingabire\",\r\n    \"regNumber\": \"24-5121\",\r\n    \"phone\": \"0780000002\",\r\n    \"programme\": \"Business\"\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -302,6 +333,37 @@
             "api",
             "students",
             "save"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "A2-Save Student 2 correction",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"firstName\": \"Claire\",\r\n    \"lastName\": \"Ingabire\",\r\n    \"regNumber\": \"24-5121\",\r\n    \"phone\": \"0780000002\",\r\n    \"programme\": \"Business\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/students/update/8156d5d3-488a-488a-b58b-ae769de62977",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "students",
+            "update",
+            "8156d5d3-488a-488a-b58b-ae769de62977"
           ]
         }
       },
@@ -446,7 +508,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n    \"firstNmae\": \"John\",\r\n    \"lastNmae\": \"Doe\",\r\n    \"phone\": \"0790000001\",\r\n    \"hostelBlock\": {\r\n        \"id\": \"72ae8c28-349d-446a-ab50-3ea15277d0a5\"\r\n    },\r\n    \"dutyAreas\": [\r\n        {\r\n            \"id\": \"eba9c05d-e0da-483e-90c8-d87716f2b294\"\r\n        },\r\n        {\r\n            \"id\": \"39b50d98-f8a5-4c7a-95dd-58c19a973ff2\"\r\n        }\r\n    ]\r\n\r\n}",
+          "raw": "{\r\n    \"firstName\": \"John\",\r\n    \"lastName\": \"Doe\",\r\n    \"phone\": \"0790000001\",\r\n    \"hostelBlock\": {\r\n        \"id\": \"72ae8c28-349d-446a-ab50-3ea15277d0a5\"\r\n    },\r\n    \"dutyAreas\": [\r\n        {\r\n            \"id\": \"eba9c05d-e0da-483e-90c8-d87716f2b294\"\r\n        },\r\n        {\r\n            \"id\": \"39b50d98-f8a5-4c7a-95dd-58c19a973ff2\"\r\n        }\r\n    ]\r\n\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -476,7 +538,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n    \"firstNmae\": \"Jane\",\r\n    \"lastNmae\": \"Smith\",\r\n    \"phone\": \"0790000002\",\r\n    \"hostelBlock\": {\r\n        \"id\": \"4dc805ae-fba1-43b0-859c-69a57fd21025\"\r\n    },\r\n    \"dutyAreas\": [\r\n        {\r\n            \"id\": \"cac21c81-e574-44c9-9e47-957ff1441113\"\r\n        }\r\n    ]\r\n\r\n}",
+          "raw": "{\r\n    \"firstName\": \"Jane\",\r\n    \"lastName\": \"Smith\",\r\n    \"phone\": \"0790000002\",\r\n    \"hostelBlock\": {\r\n        \"id\": \"4dc805ae-fba1-43b0-859c-69a57fd21025\"\r\n    },\r\n    \"dutyAreas\": [\r\n        {\r\n            \"id\": \"cac21c81-e574-44c9-9e47-957ff1441113\"\r\n        }\r\n    ]\r\n\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -506,7 +568,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n    \"firstNmae\": \"Alice\",\r\n    \"lastNmae\": \"Jones\",\r\n    \"phone\": \"0790000003\",\r\n    \"hostelBlock\": {\r\n        \"id\": \"1c4d3c46-bbbb-4b3f-a6b8-41d39cac9c8d\"\r\n    },\r\n    \"dutyAreas\": []\r\n\r\n}",
+          "raw": "{\r\n    \"firstName\": \"Alice\",\r\n    \"lastName\": \"Jones\",\r\n    \"phone\": \"0790000003\",\r\n    \"hostelBlock\": {\r\n        \"id\": \"1c4d3c46-bbbb-4b3f-a6b8-41d39cac9c8d\"\r\n    },\r\n    \"dutyAreas\": []\r\n\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -626,7 +688,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n    \"allocationDate\": \"2026-10-20\",\r\n    \"status\": \"REQUESTED\",\r\n    \"roomCode\": \"A102\",\r\n    \"bedNumber\": 2,\r\n    \"student\": {\"id\": \"8156d5d3-488a-488a-b58b-ae769de62977\"},\r\n    \"warden\": { \"id\": \"fa5c2f95-4d24-4236-895c-46025c784f11\"}\r\n}",
+          "raw": "{\r\n    \"allocationDate\": \"2026-10-20\",\r\n    \"status\": \"REQUESTED\",\r\n    \"roomCode\": \"A102\",\r\n    \"bedNumber\": 2,\r\n    \"student\": {\"id\": \"8156d5d3-488a-488a-b58b-ae769de62977\"},\r\n    \"warden\": { \"id\": \"7646b2da-a1f8-48ee-9783-820ee039ac15\"}\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -885,6 +947,403 @@
             "room-allocations",
             "save"
           ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "B1-student by last name",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"allocationDate\": \"2026-10-05\",\r\n    \"status\": \"CHECKED_IN\",\r\n    \"roomCode\": \"A110\",\r\n    \"bedNumber\": 1,\r\n    \"student\": {\"id\": \"f1cfd0fc-dd48-4a6c-a84d-0baf7218ff33\"},\r\n    \"warden\": { \"id\": \"7646b2da-a1f8-48ee-9783-820ee039ac15\"}\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/students/by-last-name?lastName=ingabire",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "students",
+            "by-last-name"
+          ],
+          "query": [
+            {
+              "key": "lastName",
+              "value": "ingabire"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "B1-student by edge case",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"allocationDate\": \"2026-10-05\",\r\n    \"status\": \"CHECKED_IN\",\r\n    \"roomCode\": \"A110\",\r\n    \"bedNumber\": 1,\r\n    \"student\": {\"id\": \"f1cfd0fc-dd48-4a6c-a84d-0baf7218ff33\"},\r\n    \"warden\": { \"id\": \"7646b2da-a1f8-48ee-9783-820ee039ac15\"}\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/students/by-last-name?lastName=zzz",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "students",
+            "by-last-name"
+          ],
+          "query": [
+            {
+              "key": "lastName",
+              "value": "zzz"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "B2-date range",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"allocationDate\": \"2026-10-05\",\r\n    \"status\": \"CHECKED_IN\",\r\n    \"roomCode\": \"A110\",\r\n    \"bedNumber\": 1,\r\n    \"student\": {\"id\": \"f1cfd0fc-dd48-4a6c-a84d-0baf7218ff33\"},\r\n    \"warden\": { \"id\": \"7646b2da-a1f8-48ee-9783-820ee039ac15\"}\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/room-allocations/between?start=2026-10-01&end=2026-10-31",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "room-allocations",
+            "between"
+          ],
+          "query": [
+            {
+              "key": "start",
+              "value": "2026-10-01"
+            },
+            {
+              "key": "end",
+              "value": "2026-10-31"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "B2-date range inclusive case",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"allocationDate\": \"2026-10-05\",\r\n    \"status\": \"CHECKED_IN\",\r\n    \"roomCode\": \"A110\",\r\n    \"bedNumber\": 1,\r\n    \"student\": {\"id\": \"f1cfd0fc-dd48-4a6c-a84d-0baf7218ff33\"},\r\n    \"warden\": { \"id\": \"7646b2da-a1f8-48ee-9783-820ee039ac15\"}\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/room-allocations/between?start=2026-10-20&end=2026-10-20",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "room-allocations",
+            "between"
+          ],
+          "query": [
+            {
+              "key": "start",
+              "value": "2026-10-20"
+            },
+            {
+              "key": "end",
+              "value": "2026-10-20"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "B2-date range failing case",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"allocationDate\": \"2026-10-05\",\r\n    \"status\": \"CHECKED_IN\",\r\n    \"roomCode\": \"A110\",\r\n    \"bedNumber\": 1,\r\n    \"student\": {\"id\": \"f1cfd0fc-dd48-4a6c-a84d-0baf7218ff33\"},\r\n    \"warden\": { \"id\": \"7646b2da-a1f8-48ee-9783-820ee039ac15\"}\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/room-allocations/between?start=abc&end=2026-10-31",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "room-allocations",
+            "between"
+          ],
+          "query": [
+            {
+              "key": "start",
+              "value": "abc"
+            },
+            {
+              "key": "end",
+              "value": "2026-10-31"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "C1-warden by duty",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"allocationDate\": \"2026-10-05\",\r\n    \"status\": \"CHECKED_IN\",\r\n    \"roomCode\": \"A110\",\r\n    \"bedNumber\": 1,\r\n    \"student\": {\"id\": \"f1cfd0fc-dd48-4a6c-a84d-0baf7218ff33\"},\r\n    \"warden\": { \"id\": \"7646b2da-a1f8-48ee-9783-820ee039ac15\"}\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/wardens/by-duty-area?name=maintenance",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "wardens",
+            "by-duty-area"
+          ],
+          "query": [
+            {
+              "key": "name",
+              "value": "maintenance"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "C1-empty case",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"allocationDate\": \"2026-10-05\",\r\n    \"status\": \"CHECKED_IN\",\r\n    \"roomCode\": \"A110\",\r\n    \"bedNumber\": 1,\r\n    \"student\": {\"id\": \"f1cfd0fc-dd48-4a6c-a84d-0baf7218ff33\"},\r\n    \"warden\": { \"id\": \"7646b2da-a1f8-48ee-9783-820ee039ac15\"}\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/wardens/by-duty-area?name=Discipline",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "wardens",
+            "by-duty-area"
+          ],
+          "query": [
+            {
+              "key": "name",
+              "value": "Discipline"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "C2-free hostel block",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"allocationDate\": \"2026-10-05\",\r\n    \"status\": \"CHECKED_IN\",\r\n    \"roomCode\": \"A110\",\r\n    \"bedNumber\": 1,\r\n    \"student\": {\"id\": \"f1cfd0fc-dd48-4a6c-a84d-0baf7218ff33\"},\r\n    \"warden\": { \"id\": \"7646b2da-a1f8-48ee-9783-820ee039ac15\"}\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/hostel-blocks/free",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "hostel-blocks",
+            "free"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "C3-unused duty area",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"allocationDate\": \"2026-10-05\",\r\n    \"status\": \"CHECKED_IN\",\r\n    \"roomCode\": \"A110\",\r\n    \"bedNumber\": 1,\r\n    \"student\": {\"id\": \"f1cfd0fc-dd48-4a6c-a84d-0baf7218ff33\"},\r\n    \"warden\": { \"id\": \"7646b2da-a1f8-48ee-9783-820ee039ac15\"}\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/duty-areas/unused",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "duty-areas",
+            "unused"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "C4-students of warden",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"allocationDate\": \"2026-10-05\",\r\n    \"status\": \"CHECKED_IN\",\r\n    \"roomCode\": \"A110\",\r\n    \"bedNumber\": 1,\r\n    \"student\": {\"id\": \"f1cfd0fc-dd48-4a6c-a84d-0baf7218ff33\"},\r\n    \"warden\": { \"id\": \"7646b2da-a1f8-48ee-9783-820ee039ac15\"}\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/students/of-warden/863d9a55-82f3-4990-b066-d85767b5459f",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "students",
+            "of-warden",
+            "863d9a55-82f3-4990-b066-d85767b5459f"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "C4-students of warden fail",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"allocationDate\": \"2026-10-05\",\r\n    \"status\": \"CHECKED_IN\",\r\n    \"roomCode\": \"A110\",\r\n    \"bedNumber\": 1,\r\n    \"student\": {\"id\": \"f1cfd0fc-dd48-4a6c-a84d-0baf7218ff33\"},\r\n    \"warden\": { \"id\": \"7646b2da-a1f8-48ee-9783-820ee039ac15\"}\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/students/of-warden/11111111-82f3-4990-b066-d85767b5459f",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "students",
+            "of-warden",
+            "11111111-82f3-4990-b066-d85767b5459f"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
         }
       },
       "response": []
