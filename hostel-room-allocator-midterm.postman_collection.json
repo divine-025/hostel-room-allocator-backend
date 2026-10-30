@@ -1338,12 +1338,925 @@
       "response": []
     },
     {
-      "name": "New Request",
+      "name": "D1-get all room-allocations",
       "request": {
         "method": "GET",
         "header": [],
         "url": {
-          "raw": ""
+          "raw": "http://localhost:8081/api/room-allocations/all",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "room-allocations",
+            "all"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "D1-success",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"allocationDate\": \"2026-12-01\",\r\n    \"status\": \"CHECKED_IN\",\r\n    \"roomCode\": \"Z100\",\r\n    \"bedNumber\": 1,\r\n    \"student\": {\"id\": \"6eb9774a-0e7b-403f-a4a0-4549acb61570\"},\r\n    \"warden\": {\"id\": \"0210ff20-e8f0-43f4-b2d9-bfa4de112d64\"}\r\n\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/room-allocations/save",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "room-allocations",
+            "save"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "D1-past date",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"allocationDate\": \"2026-01-01\",\r\n    \"status\": \"CHECKED_IN\",\r\n    \"roomCode\": \"Z100\",\r\n    \"bedNumber\": 1,\r\n    \"student\": {\"id\": \"6eb9774a-0e7b-403f-a4a0-4549acb61570\"},\r\n    \"warden\": {\"id\": \"0210ff20-e8f0-43f4-b2d9-bfa4de112d64\"}\r\n\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/room-allocations/save",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "room-allocations",
+            "save"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "D2-invaid move",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"allocationDate\": \"2026-01-01\",\r\n    \"status\": \"CHECKED_IN\",\r\n    \"roomCode\": \"Z100\",\r\n    \"bedNumber\": 1,\r\n    \"student\": {\"id\": \"6eb9774a-0e7b-403f-a4a0-4549acb61570\"},\r\n    \"warden\": {\"id\": \"0210ff20-e8f0-43f4-b2d9-bfa4de112d64\"}\r\n\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/room-allocations/ID/status?status=CHECKED_IN",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "room-allocations",
+            "ID",
+            "status"
+          ],
+          "query": [
+            {
+              "key": "status",
+              "value": "CHECKED_IN"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "D2-approved",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"allocationDate\": \"2026-01-01\",\r\n    \"status\": \"CHECKED_IN\",\r\n    \"roomCode\": \"Z100\",\r\n    \"bedNumber\": 1,\r\n    \"student\": {\"id\": \"6eb9774a-0e7b-403f-a4a0-4549acb61570\"},\r\n    \"warden\": {\"id\": \"0210ff20-e8f0-43f4-b2d9-bfa4de112d64\"}\r\n\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/room-allocations/ID/status?status=APPROVED",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "room-allocations",
+            "ID",
+            "status"
+          ],
+          "query": [
+            {
+              "key": "status",
+              "value": "APPROVED"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "D2-check in",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"allocationDate\": \"2026-01-01\",\r\n    \"status\": \"CHECKED_IN\",\r\n    \"roomCode\": \"Z100\",\r\n    \"bedNumber\": 1,\r\n    \"student\": {\"id\": \"6eb9774a-0e7b-403f-a4a0-4549acb61570\"},\r\n    \"warden\": {\"id\": \"0210ff20-e8f0-43f4-b2d9-bfa4de112d64\"}\r\n\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/room-allocations/ID/status?status=CHECKED_IN",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "room-allocations",
+            "ID",
+            "status"
+          ],
+          "query": [
+            {
+              "key": "status",
+              "value": "CHECKED_IN"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "D2-final status",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"allocationDate\": \"2026-01-01\",\r\n    \"status\": \"CHECKED_IN\",\r\n    \"roomCode\": \"Z100\",\r\n    \"bedNumber\": 1,\r\n    \"student\": {\"id\": \"6eb9774a-0e7b-403f-a4a0-4549acb61570\"},\r\n    \"warden\": {\"id\": \"0210ff20-e8f0-43f4-b2d9-bfa4de112d64\"}\r\n\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/room-allocations/ID/status?status=REQUESTED",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "room-allocations",
+            "ID",
+            "status"
+          ],
+          "query": [
+            {
+              "key": "status",
+              "value": "REQUESTED"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "D2-unknown id",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"allocationDate\": \"2026-01-01\",\r\n    \"status\": \"CHECKED_IN\",\r\n    \"roomCode\": \"Z100\",\r\n    \"bedNumber\": 1,\r\n    \"student\": {\"id\": \"6eb9774a-0e7b-403f-a4a0-4549acb61570\"},\r\n    \"warden\": {\"id\": \"0210ff20-e8f0-43f4-b2d9-bfa4de112d64\"}\r\n\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/room-allocations/11111111-1111-1111-1111-111111111111/status?status=APPROVED",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "room-allocations",
+            "11111111-1111-1111-1111-111111111111",
+            "status"
+          ],
+          "query": [
+            {
+              "key": "status",
+              "value": "APPROVED"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "D2-put cannot change status",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"allocationDate\": \"2026-01-01\",\r\n    \"status\": \"DECLINED\",\r\n    \"roomCode\": \"Z100\",\r\n    \"bedNumber\": 1,\r\n    \"student\": {\"id\": \"6eb9774a-0e7b-403f-a4a0-4549acb61570\"},\r\n    \"warden\": {\"id\": \"0210ff20-e8f0-43f4-b2d9-bfa4de112d64\"}\r\n\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/room-allocations/update/ID",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "room-allocations",
+            "update",
+            "ID"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "D3-success",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8081/api/wardens/fccd73e8-b108-4b55-bd27-a07e800916ed/duty-areas/eba9c05d-e0da-483e-90c8-d87716f2b294",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "wardens",
+            "fccd73e8-b108-4b55-bd27-a07e800916ed",
+            "duty-areas",
+            "eba9c05d-e0da-483e-90c8-d87716f2b294"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "D3-already hast it",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8081/api/wardens/fccd73e8-b108-4b55-bd27-a07e800916ed/duty-areas/eba9c05d-e0da-483e-90c8-d87716f2b294",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "wardens",
+            "fccd73e8-b108-4b55-bd27-a07e800916ed",
+            "duty-areas",
+            "eba9c05d-e0da-483e-90c8-d87716f2b294"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "D3-unknown warden",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8081/api/wardens/11111111-1111-1111-1111-111111111111/duty-areas/eba9c05d-e0da-483e-90c8-d87716f2b294",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "wardens",
+            "11111111-1111-1111-1111-111111111111",
+            "duty-areas",
+            "eba9c05d-e0da-483e-90c8-d87716f2b294"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "D3-unknown duty area",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8081/api/wardens/fccd73e8-b108-4b55-bd27-a07e800916ed/duty-areas/11111111-1111-1111-1111-111111111111",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "wardens",
+            "fccd73e8-b108-4b55-bd27-a07e800916ed",
+            "duty-areas",
+            "11111111-1111-1111-1111-111111111111"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "D4-success",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8081/api/wardens/fccd73e8-b108-4b55-bd27-a07e800916ed/hostel-block?blockNumber=4",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "wardens",
+            "fccd73e8-b108-4b55-bd27-a07e800916ed",
+            "hostel-block"
+          ],
+          "query": [
+            {
+              "key": "blockNumber",
+              "value": "4"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "D4-check with C2",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8081/api/hostel-blocks/free",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "hostel-blocks",
+            "free"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "D4-block taken",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8081/api/wardens/0210ff20-e8f0-43f4-b2d9-bfa4de112d64/hostel-block?blockNumber=4",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "wardens",
+            "0210ff20-e8f0-43f4-b2d9-bfa4de112d64",
+            "hostel-block"
+          ],
+          "query": [
+            {
+              "key": "blockNumber",
+              "value": "4"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "D4-unknown warden",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8081/api/wardens/11111111-1111-1111-1111-111111111111/hostel-block?blockNumber=4",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "wardens",
+            "11111111-1111-1111-1111-111111111111",
+            "hostel-block"
+          ],
+          "query": [
+            {
+              "key": "blockNumber",
+              "value": "4"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "D4-unknown warden Copy",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8081/api/wardens/11111111-1111-1111-1111-111111111111/hostel-block?blockNumber=4",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "wardens",
+            "11111111-1111-1111-1111-111111111111",
+            "hostel-block"
+          ],
+          "query": [
+            {
+              "key": "blockNumber",
+              "value": "4"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "E1-success",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"issue\": \"Broken windiw\",\r\n    \"description\": \"Glass creacked near the bed, draft at night\",\r\n    \"priorityLevel\": 2\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/maintenance-requests/save?roomAllocationId=7515fc9c-f1ff-4e64-8a10-ce594ee90ced",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "maintenance-requests",
+            "save"
+          ],
+          "query": [
+            {
+              "key": "roomAllocationId",
+              "value": "7515fc9c-f1ff-4e64-8a10-ce594ee90ced"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "E1-not Checked-In",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"issue\": \"Broken windiw\",\r\n    \"description\": \"Glass creacked near the bed, draft at night\",\r\n    \"priorityLevel\": 2\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/maintenance-requests/save?roomAllocationId=ffdf057b-4cc0-49e2-8f88-1ad92aaeee55",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "maintenance-requests",
+            "save"
+          ],
+          "query": [
+            {
+              "key": "roomAllocationId",
+              "value": "ffdf057b-4cc0-49e2-8f88-1ad92aaeee55"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "E1-unknown id",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"issue\": \"Broken windiw\",\r\n    \"description\": \"Glass creacked near the bed, draft at night\",\r\n    \"priorityLevel\": 2\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/maintenance-requests/save?roomAllocationId=11111111-1111-1111-1111-111111111111",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "maintenance-requests",
+            "save"
+          ],
+          "query": [
+            {
+              "key": "roomAllocationId",
+              "value": "11111111-1111-1111-1111-111111111111"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "E2",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"issue\": \"Broken windiw\",\r\n    \"description\": \"Glass creacked near the bed, draft at night\",\r\n    \"priorityLevel\": 2\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/maintenance-requests/student/24-5120",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "maintenance-requests",
+            "student",
+            "24-5120"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "E2-empty",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"issue\": \"Broken windiw\",\r\n    \"description\": \"Glass creacked near the bed, draft at night\",\r\n    \"priorityLevel\": 2\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/maintenance-requests/student/00-0000",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "maintenance-requests",
+            "student",
+            "00-0000"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "E3-delete request",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"issue\": \"Broken windiw\",\r\n    \"description\": \"Glass creacked near the bed, draft at night\",\r\n    \"priorityLevel\": 2\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081//api/maintenance-requests/delete/ffdf057b-4cc0-49e2-8f88-1ad92aaeee55",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "",
+            "api",
+            "maintenance-requests",
+            "delete",
+            "ffdf057b-4cc0-49e2-8f88-1ad92aaeee55"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "E3-unknown request",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"issue\": \"Broken windiw\",\r\n    \"description\": \"Glass creacked near the bed, draft at night\",\r\n    \"priorityLevel\": 2\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/maintenance-requests/delete/11111111-1111-1111-1111-111111111111",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "maintenance-requests",
+            "delete",
+            "11111111-1111-1111-1111-111111111111"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "E3-protected allocation",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"issue\": \"Broken windiw\",\r\n    \"description\": \"Glass creacked near the bed, draft at night\",\r\n    \"priorityLevel\": 2\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/room-allocations/delete/7515fc9c-f1ff-4e64-8a10-ce594ee90ced",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "room-allocations",
+            "delete",
+            "7515fc9c-f1ff-4e64-8a10-ce594ee90ced"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "F1",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"issue\": \"Broken windiw\",\r\n    \"description\": \"Glass creacked near the bed, draft at night\",\r\n    \"priorityLevel\": 2\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/room-allocations/stats/by-status",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "room-allocations",
+            "stats",
+            "by-status"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "F2-success",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"issue\": \"Broken windiw\",\r\n    \"description\": \"Glass creacked near the bed, draft at night\",\r\n    \"priorityLevel\": 2\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/room-allocations/stats/by-status",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "room-allocations",
+            "stats",
+            "by-status"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "F2-checked_In protected",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"issue\": \"Broken windiw\",\r\n    \"description\": \"Glass creacked near the bed, draft at night\",\r\n    \"priorityLevel\": 2\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/room-allocations/cancel-day?wardenId=4dc805ae-fba1-43b0-859c-69a57fd21025&date=2026-11-01",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "room-allocations",
+            "cancel-day"
+          ],
+          "query": [
+            {
+              "key": "wardenId",
+              "value": "4dc805ae-fba1-43b0-859c-69a57fd21025"
+            },
+            {
+              "key": "date",
+              "value": "2026-11-01"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "F2-failing case",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"issue\": \"Broken windiw\",\r\n    \"description\": \"Glass creacked near the bed, draft at night\",\r\n    \"priorityLevel\": 2\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/room-allocations/cancel-day?wardenId=4dc805ae-fba1-43b0-859c-69a57fd21025",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "room-allocations",
+            "cancel-day"
+          ],
+          "query": [
+            {
+              "key": "wardenId",
+              "value": "4dc805ae-fba1-43b0-859c-69a57fd21025"
+            }
+          ]
         }
       },
       "response": []
