@@ -19,32 +19,47 @@ public class RoomAllocationService {
 
     }
 
-    public RoomAllocation save(RoomAllocation roomAllocation) {
-        return repository.save(roomAllocation);
-    }
+    //D1: returns a message. The controller turns the message into a status code.
+    public String save (RoomAllocation roomAllocation) {
+        if (roomAllocation.getAllocationDate().isBefore(LocalDate.now())) {
+            return "Room allocation date cannot be in the past";
+        }
+        boolean busy = repository.existsByWardenIdAndAllocationDateAndStatusNot(
+            roomAllocation.getWarden().getId(),
+            roomAllocation.getAllocationDate(),
+            AllocationStatus.DECLINED);
+        if (busy) {
+            return "Warden already handles an allocation on that date";
+        }
+        roomAllocation.setStatus(AllocationStatus.REQUESTED); // always starts as REQUESTED
+        repository.save(roomAllocation);
+        return "Room allocation saved successfully";               
 
+    }
     public List<RoomAllocation> findAll() {
         return repository.findAll();
     }
-
     public Optional<RoomAllocation> findById(UUID id) {
         return repository.findById(id);
     }
+    //D2 (part)the general PUT must no longer change the status
+    //to mean we keep the status already stored.
     public Optional<RoomAllocation> update(UUID id, RoomAllocation roomAllocation) {
-        if (repository.existsById(id)) {
+        Optional<RoomAllocation> existing = repository.findById(id);
+        if (existing.isPresent()) {
             roomAllocation.setId(id);
+            roomAllocation.setStatus(existing.get().getStatus());
             return Optional.of(repository.save(roomAllocation));
         }
         return Optional.empty();
-    }
-    public boolean delete(UUID id) {
+    }public boolean delete(UUID id) {
         if (repository.existsById(id)) {
             repository.deleteById(id);
             return true;
         }
         return false;
     }
-
+    
     //B2
     public List<RoomAllocation> findByStatus(AllocationStatus status) {
         return repository.findByStatusOrderByAllocationDateAsc(status);
@@ -53,5 +68,30 @@ public class RoomAllocationService {
     //B3
     public List<RoomAllocation> findBetween(LocalDate start, LocalDate end) {
         return repository.findByAllocationDateBetweenOrderByAllocationDateAsc(start, end);
+    }
+
+    //D2: Status flow
+    public String updateStatus(UUID id, AllocationStatus newStatus) {
+        Optional<RoomAllocation> found = repository.findById(id);
+        if (found.isEmpty()) {
+            return "The room allocation woth that id does not exist";
+        }
+        RoomAllocation roomAllocation = found.get();
+        AllocationStatus current = roomAllocation.getStatus();
+        
+        boolean allowed = false;
+        if (current == AllocationStatus.REQUESTED) {
+            allowed = (newStatus == AllocationStatus.APPROVED || newStatus == AllocationStatus.DECLINED);
+        } else if (current == AllocationStatus.APPROVED) {
+            allowed = (newStatus == AllocationStatus.CHECKED_IN || newStatus == AllocationStatus.DECLINED);
+        }
+        // CHECKED_IN and DECLINE  are final: alllowed sytays false
+
+        if (!allowed) {
+            return "Cannot change status from" + current + "to" + newStatus;
+        }
+        roomAllocation.setStatus(newStatus);
+        repository.save(roomAllocation);
+        return "Room allocation status updated successfully";
     }
 }
