@@ -22,8 +22,14 @@ public class RoomAllocationController {
     }
     @PostMapping("/save")
     public ResponseEntity<?> save(@RequestBody RoomAllocation roomAllocation) {
-        service.save(roomAllocation);
-        return ResponseEntity.status(HttpStatus.CREATED).body("Room allocation saved successfully");
+        String message = service.save(roomAllocation);
+        if (message.equals("Room alllocation saved successfully")) {
+            return ResponseEntity.status(HttpStatus.CREATED).body(message);
+        } else if (message.equals("Room allocation date cannot be in the past")) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(message);
+        } else {
+            return ResponseEntity.status(HttpStatus.CONFLICT).body(message);
+        }
     }
     @GetMapping("/all")
     public ResponseEntity<List<RoomAllocation>> findAll() {
@@ -68,6 +74,18 @@ public class RoomAllocationController {
         LocalDate startDate = LocalDate.parse(start);
         LocalDate endDate = LocalDate.parse(end);
         return ResponseEntity.ok(service.findBetween(startDate, endDate));
+    }
+    // D2
+    @PatchMapping("/{id}/status")
+    public ResponseEntity<?> updateStatus(@PathVariable UUID id, @RequestParam AllocationStatus status) {
+        String message = service.updateStatus(id, status);
+        if (message.equals("Room allocation status updated successfully")) {
+            return ResponseEntity.ok(message);
+        } else if (message.startsWith("Cannot change status")) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(message);
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(message);
+        }
     }
 }
 
