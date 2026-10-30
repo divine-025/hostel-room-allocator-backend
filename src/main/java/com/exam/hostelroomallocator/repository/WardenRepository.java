@@ -1,6 +1,7 @@
 package com.exam.hostelroomallocator.repository;
 
 import com.exam.hostelroomallocator.domain.Warden;
+import com.exam.hostelroomallocator.domain.HostelBlock;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.UUID;
 import org.springframework.data.jpa.repository.Query;
@@ -12,4 +13,7 @@ public interface WardenRepository extends JpaRepository<Warden, UUID> {
     //C1
     @Query("SELECT DISTINCT w FROM Warden w JOIN w.dutyAreas d WHERE LOWER(d.name) = LOWER(:name)")
     List<Warden> searchByDutyAreaName(@Param("name") String name);
+
+    // D4: derived, is this hostel block already occupied by a warden?
+    boolean existsByHostelBlock(HostelBlock hostelBlock);
 }
