@@ -5,6 +5,7 @@ import com.exam.hostelroomallocator.domain.RoomAllocation;
 import com.exam.hostelroomallocator.domain.AllocationStatus;
 import java.time.LocalDate;
 import com.exam.hostelroomallocator.repository.RoomAllocationRepository;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
@@ -99,5 +100,16 @@ public class RoomAllocationService {
         roomAllocation.setStatus(newStatus);
         repository.save(roomAllocation);
         return "Room allocation status updated successfully";
+    }
+
+    //F1
+    public List<Object[]> statsByStatus() {
+        return repository.statsByStatus();
+    }
+    //F2: Transactional is required by the service
+    @Transactional 
+    public String cancelDay(UUID wardenId, LocalDate date) {
+        int count = repository.cancelDay(wardenId, date, AllocationStatus.DECLINED, AllocationStatus.CHECKED_IN);
+        return count + " room allocation cancelled";
     }
 }
