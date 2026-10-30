@@ -90,6 +90,19 @@ public class RoomAllocationController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(message);
         }
     }
+
+    //F1
+    @GetMapping("/stats/by-status")
+    public ResponseEntity<List<Object[]>> statsBystatus() {
+        return ResponseEntity.ok(service.statsByStatus());
+    }
+
+    //F2
+    @PatchMapping("/cancel-day")
+    public ResponseEntity<?> cancelDay(@RequestParam UUID wardenId, @RequestParam String date) {
+        LocalDate day = LocalDate.parse(date);
+        return ResponseEntity.ok(service.cancelDay(wardenId, day));
+    }
 }
 
 
