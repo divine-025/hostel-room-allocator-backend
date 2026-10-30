@@ -1,5 +1,6 @@
 package com.exam.hostelroomallocator.service;
 
+import com.exam.hostelroomallocator.repository.MaintenanceRequestRepository;
 import com.exam.hostelroomallocator.domain.RoomAllocation;
 import com.exam.hostelroomallocator.domain.AllocationStatus;
 import java.time.LocalDate;
@@ -13,9 +14,11 @@ import java.util.UUID;
 public class RoomAllocationService {
 
     private final RoomAllocationRepository repository;
-
-    public RoomAllocationService(RoomAllocationRepository repository) {
+    private final MaintenanceRequestRepository maintenanceRequestRepository;
+    
+    public RoomAllocationService(RoomAllocationRepository repository, MaintenanceRequestRepository maintenanceRequestRepository) {
         this.repository = repository;
+        this.maintenanceRequestRepository = maintenanceRequestRepository;
 
     }
 
@@ -52,14 +55,17 @@ public class RoomAllocationService {
             return Optional.of(repository.save(roomAllocation));
         }
         return Optional.empty();
-    }public boolean delete(UUID id) {
-        if (repository.existsById(id)) {
-            repository.deleteById(id);
-            return true;
+    }public String delete(UUID id) {
+        Optional<RoomAllocation> found = repository.findById(id);
+        if (found.isEmpty()) {
+            return "The room allocation with that id does not exist";
         }
-        return false;
+        if (maintenanceRequestRepository.existsByRoomAllocation(found.get())) {
+            return "The room allocation has maintenance requests, delete them first";
+        }
+        repository.deleteById(id);
+        return "Room allocation deleted successfully";
     }
-    
     //B2
     public List<RoomAllocation> findByStatus(AllocationStatus status) {
         return repository.findByStatusOrderByAllocationDateAsc(status);

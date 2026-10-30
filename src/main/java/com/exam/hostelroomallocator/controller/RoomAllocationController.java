@@ -55,10 +55,13 @@ public class RoomAllocationController {
     }
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> delete(@PathVariable UUID id) {
-        if (service.delete(id)) {
-            return ResponseEntity.ok("Room allocation deleted successfully");
+        String message = service.delete(id);
+        if(message.equals("Room allocation deleted successfully")) {
+            return ResponseEntity.ok(message);
+        } else if (message.equals("That room allocation has maintenance request, delete them first")) {
+            return ResponseEntity.status(HttpStatus.CONFLICT).body(message);
         } else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("The room allocation with that id does not exist");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(message);
         }
     }
 
