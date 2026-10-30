@@ -57,6 +57,31 @@ public class WardenController {
     public ResponseEntity<List<Warden>> findByDutyArea(@RequestParam String name) {
         return ResponseEntity.ok(service.findByDutyAreaName(name));
     }
+    //D3
+    @PutMapping("/{wardenId}/duty-areas/{dutyAreaId}")
+    public ResponseEntity<?> addDutyArea(@PathVariable UUID wardenId, @PathVariable UUID dutyAreaId) {
+        String message = service.addDutyArea(wardenId, dutyAreaId);
+        if (message.equals("Duty area added to the warden")) {
+            return ResponseEntity.ok(message);
+        } else if (message.equals("The warden already has that dyty area")) {
+            return ResponseEntity.status(HttpStatus.CONFLICT).body(message);
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(message);
+        }
+    }
+
+    // D4
+    @PatchMapping("/{wardenId}/hostel-block")
+    public ResponseEntity<?> changeHostelBlock(@PathVariable UUID wardenId, @RequestParam int blockNumber) {
+    String message = service.changeHostelBlock(wardenId, blockNumber);
+    if (message.equals("Hostel block changed successfully")) {
+        return ResponseEntity.ok(message);
+    } else if (message.equals("That hostel block is taken b another warden")) {
+        return ResponseEntity.status(HttpStatus.CONFLICT).body(message);
+    } else {
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(message);
+    }
+    }
 }
 
 
