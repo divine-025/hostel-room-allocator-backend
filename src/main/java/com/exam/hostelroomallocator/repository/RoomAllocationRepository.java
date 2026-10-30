@@ -14,5 +14,8 @@ public interface RoomAllocationRepository extends JpaRepository<RoomAllocation, 
 
     //B3
     List<RoomAllocation> findByAllocationDateBetweenOrderByAllocationDateAsc(LocalDate start, LocalDate end);
+
+    //D1: derived (existsBy + And + Not).
+    boolean existsByWardenIdAndAllocationDateAndStatusNot(UUID wardenId, LocalDate allocationDate, AllocationStatus status);
     
 }
