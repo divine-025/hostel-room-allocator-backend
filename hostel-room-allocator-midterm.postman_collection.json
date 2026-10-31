@@ -1024,7 +1024,79 @@
       "response": []
     },
     {
-      "name": "B2-date range",
+      "name": "B2",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"allocationDate\": \"2026-10-05\",\r\n    \"status\": \"CHECKED_IN\",\r\n    \"roomCode\": \"A110\",\r\n    \"bedNumber\": 1,\r\n    \"student\": {\"id\": \"f1cfd0fc-dd48-4a6c-a84d-0baf7218ff33\"},\r\n    \"warden\": { \"id\": \"7646b2da-a1f8-48ee-9783-820ee039ac15\"}\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/room-allocations/by-status?status=REQUESTED",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "room-allocations",
+            "by-status"
+          ],
+          "query": [
+            {
+              "key": "status",
+              "value": "REQUESTED"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "B2-wrong",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"allocationDate\": \"2026-10-05\",\r\n    \"status\": \"CHECKED_IN\",\r\n    \"roomCode\": \"A110\",\r\n    \"bedNumber\": 1,\r\n    \"student\": {\"id\": \"f1cfd0fc-dd48-4a6c-a84d-0baf7218ff33\"},\r\n    \"warden\": { \"id\": \"7646b2da-a1f8-48ee-9783-820ee039ac15\"}\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/room-allocations/by-status?status=WRONG",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "room-allocations",
+            "by-status"
+          ],
+          "query": [
+            {
+              "key": "status",
+              "value": "WRONG"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "B3",
       "request": {
         "method": "GET",
         "header": [],
@@ -1064,7 +1136,7 @@
       "response": []
     },
     {
-      "name": "B2-date range inclusive case",
+      "name": "B3",
       "request": {
         "method": "GET",
         "header": [],
@@ -1104,7 +1176,7 @@
       "response": []
     },
     {
-      "name": "B2-date range failing case",
+      "name": "B3-date range failing case",
       "request": {
         "method": "GET",
         "header": [],
@@ -1433,7 +1505,7 @@
           }
         },
         "url": {
-          "raw": "http://localhost:8081/api/room-allocations/ID/status?status=CHECKED_IN",
+          "raw": "http://localhost:8081/api/room-allocations/5603d78c-2fc2-40cc-872f-1279e2a13d7c/status?status=CHECKED_IN",
           "protocol": "http",
           "host": [
             "localhost"
@@ -1442,7 +1514,7 @@
           "path": [
             "api",
             "room-allocations",
-            "ID",
+            "5603d78c-2fc2-40cc-872f-1279e2a13d7c",
             "status"
           ],
           "query": [
@@ -1470,7 +1542,7 @@
           }
         },
         "url": {
-          "raw": "http://localhost:8081/api/room-allocations/ID/status?status=APPROVED",
+          "raw": "http://localhost:8081/api/room-allocations/5603d78c-2fc2-40cc-872f-1279e2a13d7c/status?status=APPROVED",
           "protocol": "http",
           "host": [
             "localhost"
@@ -1479,7 +1551,7 @@
           "path": [
             "api",
             "room-allocations",
-            "ID",
+            "5603d78c-2fc2-40cc-872f-1279e2a13d7c",
             "status"
           ],
           "query": [
@@ -1507,7 +1579,7 @@
           }
         },
         "url": {
-          "raw": "http://localhost:8081/api/room-allocations/ID/status?status=CHECKED_IN",
+          "raw": "http://localhost:8081/api/room-allocations/5603d78c-2fc2-40cc-872f-1279e2a13d7c/status?status=CHECKED_IN",
           "protocol": "http",
           "host": [
             "localhost"
@@ -1516,7 +1588,7 @@
           "path": [
             "api",
             "room-allocations",
-            "ID",
+            "5603d78c-2fc2-40cc-872f-1279e2a13d7c",
             "status"
           ],
           "query": [
@@ -1544,7 +1616,7 @@
           }
         },
         "url": {
-          "raw": "http://localhost:8081/api/room-allocations/ID/status?status=REQUESTED",
+          "raw": "http://localhost:8081/api/room-allocations/5603d78c-2fc2-40cc-872f-1279e2a13d7c/status?status=REQUESTED",
           "protocol": "http",
           "host": [
             "localhost"
@@ -1553,7 +1625,7 @@
           "path": [
             "api",
             "room-allocations",
-            "ID",
+            "5603d78c-2fc2-40cc-872f-1279e2a13d7c",
             "status"
           ],
           "query": [
@@ -1618,7 +1690,7 @@
           }
         },
         "url": {
-          "raw": "http://localhost:8081/api/room-allocations/update/ID",
+          "raw": "http://localhost:8081/api/room-allocations/update/5603d78c-2fc2-40cc-872f-1279e2a13d7c",
           "protocol": "http",
           "host": [
             "localhost"
@@ -1628,7 +1700,7 @@
             "api",
             "room-allocations",
             "update",
-            "ID"
+            "5603d78c-2fc2-40cc-872f-1279e2a13d7c"
           ]
         }
       },
@@ -2157,7 +2229,7 @@
     {
       "name": "F2-success",
       "request": {
-        "method": "GET",
+        "method": "PATCH",
         "header": [],
         "body": {
           "mode": "raw",
@@ -2169,7 +2241,7 @@
           }
         },
         "url": {
-          "raw": "http://localhost:8081/api/room-allocations/stats/by-status",
+          "raw": "http://localhost:8081/api/room-allocations/cancel-day?wardenId=e689f500-7d4e-44e2-a7e3-f6bb29638c5a&date=2026-12-20",
           "protocol": "http",
           "host": [
             "localhost"
@@ -2178,8 +2250,17 @@
           "path": [
             "api",
             "room-allocations",
-            "stats",
-            "by-status"
+            "cancel-day"
+          ],
+          "query": [
+            {
+              "key": "wardenId",
+              "value": "e689f500-7d4e-44e2-a7e3-f6bb29638c5a"
+            },
+            {
+              "key": "date",
+              "value": "2026-12-20"
+            }
           ]
         }
       },
@@ -2200,7 +2281,7 @@
           }
         },
         "url": {
-          "raw": "http://localhost:8081/api/room-allocations/cancel-day?wardenId=4dc805ae-fba1-43b0-859c-69a57fd21025&date=2026-11-01",
+          "raw": "http://localhost:8081/api/room-allocations/cancel-day?wardenId=ec4ce353-82ab-460d-8698-779db24e4d0e&date=2026-11-01",
           "protocol": "http",
           "host": [
             "localhost"
@@ -2214,7 +2295,7 @@
           "query": [
             {
               "key": "wardenId",
-              "value": "4dc805ae-fba1-43b0-859c-69a57fd21025"
+              "value": "ec4ce353-82ab-460d-8698-779db24e4d0e"
             },
             {
               "key": "date",
